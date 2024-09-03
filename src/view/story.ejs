@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>story</title>
+  </head>
+  <body>
+    <header>
+    <main>
+      <img
+        src="/img/pexels-pixabay.jpg"
+        width="100%"
+        height="500px"
+        alt="logo"
+      />
+      <section>
+        <h2>Latest Article</h2>
+        <article>
+          <h3><%= datas.title %></h3>
+          <p><%= datas.content %></p>
+          <p>Date <%= new Date(datas.publishDate).toLocaleDateString()%> à <%= new Date(datas.publishDate).toLocaleTimeString() %></p>
+          <p><%= datas.author %></p>
+          <p> Catégorie : <%=datas.label %></p> 
+          <p> ID catégorie : <%=datas.category_id %></p>
+          <% if (datas.category_id == 2) { %>
+            <p>wsh</p>
+            <% } %>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

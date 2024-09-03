@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>hello</h1>
+      <nav>
+        <a href="/authentication">sign-in</a>
+        <a href="/contact">contact</a>
+        <a href="/about">about-me</a>
+        <a href="/admin">admin</a>
+      </nav>
+    </header>
+    <main>
+      <img
+        src="/img/pexels-pixabay.jpg"
+        width="100%"
+        height="500px"
+        alt="logo"
+      />
+      <section>
+        <h2>Latest Article</h2>
+        <% for(const data of datas){ %>
+        <article>
+          <h3><%= data.title %></h3>
+          <a href="/story/<%=data.id%>">Read more</a>
+        </article>
+        <% } %>
+      </section>
+    </main>
+  </body>
+</html>
